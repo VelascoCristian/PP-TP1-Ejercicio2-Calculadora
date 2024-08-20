@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="calculator.ico" />
+  </head>
+  <header>
+    <h1>Calculadora</h1>
+  </header>
+  <body>
+    <div id="view">
+      <span
+        ><img src="calculator.png" alt="Calculadora" id="iconCalculator" />
+        Calculadora</span
+      >
+      <input type="text" id="show" value="0" readonly />
+      <div id="keys">
+        <button onclick="showKey('pi')">π</button>
+        <button onclick="showKey('e')">e</button>
+        <button onclick="showKey('ce')" id="ce">C</button>
+        <button onclick="showKey('erase')">⌫</button>
+
+        <button onclick="showKey('openParenthesis')">(</button>
+        <button onclick="showKey('closeParenthesis')">)</button>
+        <button onclick="showKey('factorial')" class="factorial">!</button>
+        <button onclick="showKey('divide')">÷</button>
+
+        <button onclick="showKey(7)" id="lightKey">7</button>
+        <button onclick="showKey(8)" id="lightKey">8</button>
+        <button onclick="showKey(9)" id="lightKey">9</button>
+        <button onclick="showKey('multiply')">x</button>
+
+        <button onclick="showKey(4)" id="lightKey">4</button>
+        <button onclick="showKey(5)" id="lightKey">5</button>
+        <button onclick="showKey(6)" id="lightKey">6</button>
+        <button onclick="showKey('minus')">-</button>
+
+        <button onclick="showKey(1)" id="lightKey">1</button>
+        <button onclick="showKey(2)" id="lightKey">2</button>
+        <button onclick="showKey(3)" id="lightKey">3</button>
+        <button onclick="showKey('plus')">+</button>
+
+        <button onclick="showKey('plusOrMinus')" id="lightKey">+/-</button>
+        <button onclick="showKey(0)" id="lightKey">0</button>
+        <button onclick="showKey('decimal')" id="lightKey">,</button>
+        <button onclick="showKey('equal')">=</button>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <p>© Velasco Cristian, 2024. Todos los derechos reservados.</p>
+  </footer>
+  <script src="script.js"></script>
+</html>

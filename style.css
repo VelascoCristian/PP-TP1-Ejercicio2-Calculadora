@@ -1,0 +1,160 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  animation: gradient 15s ease infinite;
+  background: linear-gradient(
+    315deg,
+    rgba(12, 35, 90, 1) 10%,
+    rgba(25, 78, 130, 1) 30%,
+    rgba(18, 52, 86, 1) 90%,
+    rgb(18, 19, 86) 98%
+  );
+  background-attachment: fixed;
+  background-size: 400% 400%;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif, Arial, Helvetica;
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+h1 {
+  background-color: rgba(0, 0, 0, 0.6);
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+  color: rgba(235, 240, 241, 1);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+span {
+  text-align: left;
+  width: 100%;
+}
+
+#iconCalculator {
+  height: 22px;
+  margin-left: -5px;
+  margin-bottom: -1%;
+  padding-bottom: -10px
+  width: auto;
+}
+
+button {
+  background-color: rgba(56, 59, 66, 0.7);
+  border-radius: 5px;
+  border: none;
+  color: rgba(235, 240, 241, 1);
+  height: 5vh;
+  font-size: 1.2rem;
+  width: 12vw;
+}
+
+button:last-child {
+  background-color: rgba(70, 194, 255, 0.85);
+  color: rgba(0, 0, 0, 0.85);
+}
+
+button:hover {
+  background-color: rgba(56, 59, 66, 0.9);
+}
+
+button:last-child:hover {
+  background-color: rgba(70, 194, 255, 0.9);
+}
+
+input {
+  background-color: rgba(56, 59, 66, 0.7);
+  border-bottom-width: 1.25px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  color: rgba(235, 240, 241, 1);
+  font-size: 2.5em;
+  margin: 0.75vh 0;
+  text-align: right;
+  width: 100%;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#view {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  color: rgba(235, 240, 241, 1);
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85em;
+  margin: auto;
+  padding: 1vh 1vw;
+  width: 49%;
+}
+
+#keys {
+  gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.factorial::before {
+  content: "n";
+  font-style: italic;
+  margin-right: 2px;
+}
+
+#lightKey {
+  background-color: rgba(70, 70, 80, 0.7);
+}
+
+#lightKey:hover {
+  background-color: rgba(56, 59, 66, 0.7);
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  clip-path: polygon(0 100%, 100% 100%, 95% 0, 5% 0);
+  color: rgba(235, 240, 241, 1);
+  margin-top: 10vh;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@media (max-width: 768px) {
+  button {
+    font-size: 0.75rem;
+    margin: 1px;
+  }
+
+  input {
+    width: 95%;
+  }
+
+  #view {
+    width: 55%;
+  }
+}
