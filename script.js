@@ -85,14 +85,6 @@ function calculateResult() {
 
 //Función matriz encargada de controlar y largar las funciones necesarios de acuerdo al boton seleccionado
 function showKey(input) {
-  //Aunque la calculadora muestra 0(cero), la primerava vez, es solo visualmente entonces de esta forma lo agregamos al código
-  if (!firstSegment) {
-    firstSegment = "0";
-  }
-  if (!show.value) {
-    show.value = "0";
-  }
-
   //Reseteo valores cuando da indefinido
   if (
     show.value === "Resultado indefinido" ||
@@ -110,7 +102,7 @@ function showKey(input) {
       secondSegment += input;
       show.value += input;
     } else {
-      //Significa que estoy en el primer segmetno
+      //Significa que estoy en el primer segmento
       CToCe;
       if (firstSegment === "0" && input !== "0") {
         //Significa que es el primer número ingresado
